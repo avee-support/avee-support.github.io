@@ -429,6 +429,21 @@ h3 {
   align-items: center;
 }
 
+.download-banner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download-banner-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-light);
+}
+
 .download-banner-link {
   display: inline-block;
   transition: transform var(--transition), opacity var(--transition);
