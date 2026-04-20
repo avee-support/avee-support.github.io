@@ -815,6 +815,21 @@ h3 {
   font-size: 0.87rem;
 }
 
+.footer-links {
+  margin-top: 0.75rem;
+  font-size: 0.87rem;
+}
+
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--accent-light);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hero {
