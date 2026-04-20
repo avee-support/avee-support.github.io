@@ -792,6 +792,36 @@ h3 {
   text-decoration: underline;
 }
 
+/* ===== Social ===== */
+.social-section {
+  padding: 3rem 0;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-flex;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+.social-link img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
 /* ===== Footer ===== */
 .footer {
   background: var(--bg);
