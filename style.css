@@ -368,9 +368,16 @@ h1, h2, h3 { line-height: 1.2; }
 /* ===== Gallery / Screenshots ===== */
 .screenshots-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
   justify-items: center;
+}
+
+@media (max-width: 640px) {
+  .screenshots-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
 }
 
 .screenshot-thumb {
