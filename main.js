@@ -52,13 +52,18 @@ const lightboxImg  = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxPrev = document.getElementById('lightboxPrev');
 const lightboxNext = document.getElementById('lightboxNext');
-const thumbs = Array.from(document.querySelectorAll('.screenshot-thumb img'));
+let currentThumbs = [];
 let currentIndex = 0;
 
-function openLightbox(index) {
+function showAt(index) {
   currentIndex = index;
-  lightboxImg.src = thumbs[currentIndex].src;
-  lightboxImg.alt = thumbs[currentIndex].alt;
+  lightboxImg.src = currentThumbs[currentIndex].src;
+  lightboxImg.alt = currentThumbs[currentIndex].alt;
+}
+
+function openLightbox(thumbs, index) {
+  currentThumbs = thumbs;
+  showAt(index);
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -69,20 +74,25 @@ function closeLightbox() {
 }
 
 function showPrev() {
-  currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
-  lightboxImg.src = thumbs[currentIndex].src;
-  lightboxImg.alt = thumbs[currentIndex].alt;
+  if (!currentThumbs.length) return;
+  showAt((currentIndex - 1 + currentThumbs.length) % currentThumbs.length);
 }
 
 function showNext() {
-  currentIndex = (currentIndex + 1) % thumbs.length;
-  lightboxImg.src = thumbs[currentIndex].src;
-  lightboxImg.alt = thumbs[currentIndex].alt;
+  if (!currentThumbs.length) return;
+  showAt((currentIndex + 1) % currentThumbs.length);
 }
 
-document.querySelectorAll('.screenshot-thumb').forEach((btn, i) => {
-  btn.addEventListener('click', () => openLightbox(i));
-});
+function bindGalleryGroup(selector) {
+  const buttons = Array.from(document.querySelectorAll(selector));
+  const imgs = buttons.map(btn => btn.querySelector('img'));
+  buttons.forEach((btn, i) => {
+    btn.addEventListener('click', () => openLightbox(imgs, i));
+  });
+}
+
+bindGalleryGroup('.screenshot-thumb');
+bindGalleryGroup('.visualization-thumb');
 
 lightboxClose.addEventListener('click', closeLightbox);
 lightboxPrev.addEventListener('click', showPrev);
@@ -113,7 +123,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 // Attach to section children
 document.querySelectorAll(
-  '.feature-card, .screenshot-thumb, .download-banner-link, .faq-item, .section-title, .section-sub'
+  '.feature-card, .screenshot-thumb, .visualization-thumb, .download-banner-link, .faq-item, .section-title, .section-sub'
 ).forEach(el => {
   el.classList.add('reveal');
   revealObserver.observe(el);
