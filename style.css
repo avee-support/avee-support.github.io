@@ -100,7 +100,7 @@ h3 {
 }
 
 .nav-logo {
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   font-weight: 800;
   text-decoration: none;
   color: var(--text);
@@ -609,17 +609,21 @@ h3 {
 
 .donate-buttons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  flex-wrap: wrap;
   margin-bottom: 1.5rem;
 }
 
 .donate-container .donate-btn-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   max-width: none;
+}
+
+.donate-container .donate-btn-paypal {
+  height: 104px;
 }
 
 .donate-qr {
@@ -842,7 +846,7 @@ h3 {
 }
 
 .social-link img.social-icon-kofi {
-  width: 38px;
+  width: 48px;
   height: 38px;
 }
 
