@@ -257,7 +257,7 @@ h3 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 55%;
+  width: 70%;
   height: 100%;
   pointer-events: none;
   overflow: hidden;
@@ -268,8 +268,8 @@ h3 {
   height: 100%;
   object-fit: cover;
   opacity: 0.85;
-  mask-image: linear-gradient(to right, transparent 0%, black 40%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  mask-image: linear-gradient(to right, transparent 0%, black 0%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%);
 }
 
 /* ===== Download ===== */
@@ -663,6 +663,14 @@ h3 {
 
 .partnership-email:hover {
   color: var(--accent-light);
+}
+
+.partnership-waves {
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin-top: 1.5rem;
+  overflow: visible;
 }
 
 @media (max-width: 640px) {
