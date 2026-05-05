@@ -905,6 +905,15 @@ h3 {
     padding-top: 7rem;
   }
 
+  .hero-visual {
+    width: 100%;
+    opacity: 0.35;
+  }
+
+  .hero-video {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+  }
 
   .hero-desc {
     margin-left: auto;
