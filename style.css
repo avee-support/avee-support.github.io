@@ -306,6 +306,16 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.download-banner-item:hover,
+.download-banner-item.visible:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
 }
 
 .download-banner-title {
@@ -316,17 +326,7 @@ h3 {
   color: var(--accent-light);
 }
 
-.download-banner-link {
-  display: inline-block;
-  transition: transform var(--transition), opacity var(--transition);
-}
-
-.download-banner-link:hover {
-  transform: translateY(-3px);
-  opacity: 0.85;
-}
-
-.download-banner-link img {
+.download-banner-item img {
   height: 52px;
   width: auto;
   display: block;

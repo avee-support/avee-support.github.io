@@ -123,7 +123,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 // Attach to section children
 document.querySelectorAll(
-  '.feature-card, .screenshot-thumb, .visualization-thumb, .download-banner-link, .faq-item, .section-title, .section-sub'
+  '.feature-card, .screenshot-thumb, .visualization-thumb, .download-banner-item, .faq-item, .section-title, .section-sub'
 ).forEach(el => {
   el.classList.add('reveal');
   revealObserver.observe(el);
