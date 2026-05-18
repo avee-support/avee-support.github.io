@@ -102,8 +102,10 @@ h3 {
 }
 
 .nav-logo {
+  font-family: 'Public Sans', sans-serif;
   font-size: 1.0rem;
-  font-weight: 800;
+  font-weight: 900;
+  font-style: italic;
   text-decoration: none;
   color: var(--text);
   letter-spacing: -0.5px;
@@ -871,8 +873,10 @@ h3 {
 }
 
 .footer-logo {
+  font-family: 'Public Sans', sans-serif;
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 900;
+  font-style: italic;
   margin-bottom: 0.5rem;
 }
 
