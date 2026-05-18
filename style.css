@@ -539,7 +539,9 @@ h3 {
 }
 
 .feature-tag-title {
-  font-weight: 700;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 900;
+  font-style: italic;
   font-size: 1.1rem;
   color: var(--accent);
 }
