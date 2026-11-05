@@ -1,6 +1,7 @@
 google.com, pub-3759586557634138, DIRECT, f08c47fec0942fa0
 facebook.com, 1100554196152782, DIRECT, c3e20eee3f780d68
 unity.com, 2194189, DIRECT, 96cabb5fbdde37a7
+pangleglobal.com, 5046006, DIRECT
 brightmountainmedia.com, 2686958, RESELLER
 conversantmedia.com, 41024, RESELLER, 03113cd04947736d
 opera.com, pub6148735850944, RESELLER, 55a0c5fd61378de3
